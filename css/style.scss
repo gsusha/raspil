@@ -1,0 +1,507 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+// Переменные  
+$dark: #424046;
+$light: #F4F5F4;
+$brown: #B1907F;
+$light-brown: #A49B98;
+
+// Миксины
+
+$max-width: 1280;
+
+@mixin resp-font($pcSize, $mobileSize) {
+	$addSize: $pcSize - $mobileSize;
+	$addMobileSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobileSize + px} + #{$addMobileSize} * ((100vw - 320px) / #{$max-width}));
+	}
+	@media (min-width: 767px) {
+		font-size: calc(#{$mobileSize + px} + #{$addSize} * (100vw / #{$max-width}));
+	}
+}
+
+
+/* ------ Оболочка  ------ */
+
+html,body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	
+	font-family: "Roboto";
+	font-size: 18px;
+	font-weight: 400;
+	color: #light;
+	line-height: 1.5;
+}
+
+/* ------ Контейнеры ------ */
+
+.container{
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 0 30px;
+}
+
+.content {
+  /* Контент занимает всё место между header и footer */
+  flex: 1 1 auto;
+}
+
+
+/* ------ Home ------ */
+
+.home {
+	height: 100vh;
+	background: $dark;
+	
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+
+	.home__body {
+		color: $light;
+
+		.home__title {
+			@include resp-font(48, 30);
+			font-weight: 700;
+
+			margin: 0px 0px 14px 0px;
+		}
+		.home__subtitle {
+			@include resp-font(24, 16);
+
+			margin: 0px 0px 40px 0px;
+		}
+		.home__btns {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			.home__order-btn {
+				display: inline-block;
+
+				color: $light;
+				background: $brown;
+				@include resp-font(18, 16);
+				font-weight: 700;
+
+				border-radius: 5px;
+				padding: 12px 30px;
+				margin: 0px 0px 16px 0px;
+
+				transition: 0.3s ease 0s;
+			}
+			.home__order-btn:hover {
+				color: $brown;
+				background: $light;
+			}
+
+			.home__calc-btn {
+				display: inline-block;
+
+				color: $light;
+				background: $light-brown;
+				@include resp-font(18, 16);
+				font-weight: 700;
+
+				border-radius: 5px;
+				padding: 12px 30px;
+				margin: 0px 0px 16px 0px;
+
+				transition: 0.3s ease 0s;
+			}
+			.home__calc-btn:hover {
+				color: $light-brown;
+				background: $light;
+			}
+		}
+	}
+
+	.home__down {
+		background: $brown;
+		width: 70px;
+		height: 70px;
+		border-radius: 50px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		position: absolute;
+		bottom: -5%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+}
+
+
+/* ------ About ------ */
+
+.about {
+	background: $light; 
+
+	padding: 100px 0;
+	.about__body {
+		color: $dark;
+
+		.about__title {
+			@include resp-font(48, 30);
+			font-weight: 700;
+			text-align: center;
+
+			margin: 0px 0px 60px 0px;
+		}
+		.about__text {
+			@include resp-font(24, 16);
+
+			margin: 0px 0px 80px 0px;
+		}
+		.about__subtitle {
+			@include resp-font(24, 16);
+			font-weight: 700;
+
+			margin: 0px 0px 40px 0px;
+		}
+		.about__icons {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			.about__item {
+				display: flex;
+
+				margin: 0px 20px 40px 0px;
+
+				position: relative;
+
+				.about__icon {
+					margin: 0px 10px 0px 0px;
+					max-width: 30px;
+					min-width: 20px;
+				}
+				.about__icon img {
+						width: 100%;
+				}
+				.about__name {
+					@include resp-font(18, 12);
+					font-weight: 500;
+				}
+			}
+
+		}
+
+	}
+}
+
+
+/* ------ Calc ------ */
+
+.calc {
+	background: $dark;
+
+	padding: 100px 0;
+
+	.calc__body {
+		color: $light;
+
+		.calc__title {
+			@include resp-font(48, 30);
+			font-weight: 700;
+			text-align: center;
+
+			margin: 0px 0px 60px 0px;
+		}
+
+		.calc__options {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			margin: 0px 0px 40px 0px;
+			.calc__item {
+				margin: 0px 0px 20px 0px;
+				.calc__name {
+					@include resp-font(24, 18);
+					font-weight: 500;
+
+					margin: 0px 0px 5px 0px;
+				}
+
+				.calc__select {
+					width: 260px;
+					height: 40px;
+					border-radius: 5px;
+
+					@include resp-font(18, 16);
+					font-weight: 600;
+					color: $dark;
+
+					padding: 0px 10px;
+				}
+
+				.calc__mini-select {
+					width: 110px;
+					height: 40px;
+					border-radius: 5px;
+
+					@include resp-font(18, 16);
+					font-weight: 600;
+					color: $dark;
+
+					padding: 0px 10px;
+				}
+
+				.calc__input {
+					width: 110px;
+					height: 40px;
+
+					border-radius: 5px;
+
+					@include resp-font(18, 16);
+					font-weight: 600;
+					color: $dark;
+
+					padding: 0px 12px;
+				}
+
+			}
+
+			.calc__item span {
+				color: $brown;
+				font-weight: 700;
+				margin: 0px 10px;
+			}
+
+		}
+
+		.calc__output {
+			@include resp-font(36, 24);
+			font-weight: 700;
+			text-align: center;
+
+			position: relative;
+			margin: 0px 0px 60px 0px;
+		}
+
+		.calc__output::after {
+			content: '';
+			width: 100%;
+			height: 3px;
+			background: $brown;
+
+			position: absolute;
+			bottom: -50%;
+			left: 0;
+		}
+
+		.calc__btns {
+
+			.cacl__calc-btn {
+				display: inline-block;
+
+				color: $light;
+				background: $light-brown;
+				@include resp-font(18, 16);
+				font-weight: 700;
+
+				border-radius: 5px;
+				padding: 12px 30px;
+				margin: 0px 0px 16px 0px;
+
+				transition: 0.3s ease 0s;
+			}
+			.cacl__calc-btn:hover {
+				color: $light-brown;
+				background: $light;
+			}
+			.calc__order-btn {
+				display: inline-block;
+
+				color: $light;
+				background: $brown;
+				@include resp-font(18, 16);
+				font-weight: 700;
+
+				border-radius: 5px;
+				padding: 12px 30px;
+
+				transition: 0.3s ease 0s;
+			}
+			.calc__order-btn:hover {
+				color: $brown;
+				background: $light;
+			}
+
+		}
+
+	}
+}
+
+
+/* ------ Price ------ */
+
+.price {
+	background: $light;
+
+	padding: 100px 0;
+
+	.price__body {
+		color: $dark;
+
+		.price__title {
+			@include resp-font(48, 30);
+			font-weight: 700;
+			text-align: center;
+
+			margin: 0px 0px 60px 0px;
+		}
+
+		.price__table {
+			width: 100%;
+
+			@include resp-font(18, 14);
+			text-align: left;
+
+			border-collapse: collapse;
+			border: 2px solid $brown;
+		}
+		.price__table th {
+			font-weight: 500;
+			border: 2px solid $brown;
+		}
+		.price__table td {
+			font-weight: 400;
+			/* border: 2px solid $light; */
+			
+		}
+		.price__table th, td {
+			padding: 10px 20px;
+		}
+
+		.price__table th:last-child, td:last-child {
+			width: 20%;
+			text-align: center;
+			font-weight: 500;
+		}
+
+		.price__table tr:nth-child(2n) {
+			color: $dark;
+  		background: rgba(164, 155, 152, 0.1);
+		}
+	}
+}
+
+
+/* ------ Order ------ */
+
+.order {
+	background: $dark;
+
+	padding: 100px 0;
+
+	.order__body {
+		color: $light;
+
+		.order__title {
+			@include resp-font(48, 30);
+			font-weight: 700;
+			text-align: center;
+
+			margin: 0px 0px 60px 0px;
+		}
+
+		.order__row {}
+
+		.order__item {
+			display: flex;
+			flex-direction: column;
+			width: 260px;
+
+			margin: 0px 0px 20px 0px;
+
+			.order__name {
+				@include resp-font(18, 16);
+				color: $brown;
+				font-weight: 500;
+
+				margin: 0px 0px 5px 0px;
+			}
+		}
+
+		.order__item input {
+			height: 40px; 
+			border-radius: 5px;
+
+			width: 100%;
+
+			@include resp-font(18, 16);
+			color: $dark;
+
+			padding: 0px 12px;
+			width: 100%;
+		}
+		.order__item textarea {
+			height: 100px; 
+			border-radius: 5px;
+
+			@include resp-font(18, 16);
+			color: $dark;
+
+			padding: 12px 12px;
+			width: 100%;
+			resize: none;
+
+			margin: 0px 0px 40px 0px;
+		}
+
+		.order__submit input {
+			display: block;
+
+			color: $light;
+			background: $brown;
+			@include resp-font(18, 16);
+			font-weight: 700;
+
+			border-radius: 5px;
+			padding: 12px 30px;
+
+			transition: 0.3s ease 0s;
+		}
+		.order__submit input:hover {
+			color: $brown;
+			background: $light;
+		}
+	}
+
+	.order__body form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+
+/* ------ Seo ------ */
+
+.seo {
+	background: $light;
+
+	padding: 100px 0;
+
+	.seo__body {
+		color: $dark;
+		opacity: 0.5;
+
+		@include resp-font(18, 14);
+	}
+}
