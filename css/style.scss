@@ -1,4 +1,5 @@
 @import "nullstyle.scss";
+//Подключение медиа внизу страницы
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 // Переменные  
@@ -22,7 +23,7 @@ $max-width: 1280;
 	}
 }
 
-
+ 
 /* ------ Оболочка  ------ */
 
 html,body {
@@ -63,7 +64,6 @@ body.lock {
 
 .header {
 	position: fixed;
-	background: $dark;
 	padding: 14px 0;
 	z-index: 5;
 
@@ -104,6 +104,8 @@ body.lock {
 			width: 32px;
 			height: 21px;
 			z-index: 3;
+
+			cursor: pointer;
 		}
 		.header__burger span {
 			position: absolute;
@@ -216,7 +218,7 @@ body.lock {
 
 .home {
 	height: 100vh;
-	background: $dark;
+	background-color: $dark;
 	
 
 	display: flex;
@@ -775,3 +777,6 @@ body.lock {
 		}
 	}
 }
+
+//Подключение файла с медиа
+@import "media.scss";

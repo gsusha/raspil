@@ -110,7 +110,6 @@ body.lock {
 /* ------ Header ------ */
 .header {
   position: fixed;
-  background: #424046;
   padding: 14px 0;
   z-index: 5;
   width: 100%;
@@ -167,6 +166,7 @@ body.lock {
   width: 32px;
   height: 21px;
   z-index: 3;
+  cursor: pointer;
 }
 .header .header__body .header__burger span {
   position: absolute;
@@ -289,7 +289,7 @@ body.lock {
 /* ------ Home ------ */
 .home {
   height: 100vh;
-  background: #424046;
+  background-color: #424046;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1040,3 +1040,97 @@ body.lock {
 .footer .footer__wrapper .footer__copyright a:hover {
   color: #F4F5F4;
 }
+
+@media (min-width: 768px) {
+  /* ------ Header ------ */
+  /* ------ Home ------ */
+  .home {
+    background-image: url("../img/bg/saw.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+  }
+  .home .home__body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    padding: 0px 40px 0px 0px;
+  }
+  .home .home__body .home__btns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .home .home__body .home__btns .home__order-btn {
+    margin: 0px 20px 0px 0px;
+  }
+
+  /* ------ About ------ */
+  .about {
+    background-image: url("../img/bg/human_saw.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 50%;
+  }
+  /* ------ Calc ------ */
+  .calc {
+    background-image: url("../img/bg/calculator.svg");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+  }
+
+  /* ------ Price ------ */
+  .price {
+    background-image: url("../img/bg/money.svg");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: right 0% bottom 50%;
+  }
+
+  /* ------ Order ------ */
+  .order {
+    background-image: url("../img/bg/saw_bg.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+  }
+  .order .order__body .order__item {
+    width: 500px;
+  }
+
+  /* ------ Footer ------ */
+  .footer {
+    background-image: url("../img/bg/pin.svg");
+    background-size: 12%;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+  }
+  .footer .footer__wrapper .footer__body {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer .footer__wrapper .footer__body .footer__column {
+    margin: 0px 60px 0px 0px;
+  }
+  .footer .footer__wrapper .footer__body .footer__map {
+    min-width: 400px;
+  }
+  .footer .footer__wrapper .footer__body .footer__map iframe {
+    height: 350px;
+  }
+}
+/* Конец медия 768px */
