@@ -2,14 +2,57 @@
 
 	/* ------ Header ------ */
 
+	.header {
+		padding: 26px 0;
+		transition: all 0.3s ease 0s;
+		.header__body {
+			.header__logo {
+				.header__logo-img {
+					margin: 0 20px 0 0;
+				}
+			}
+			.header__burger {
+				display: none;
+			}
+			.header__menu {
+				position: static;
+				background: none;
+				padding: 0;
+				width: auto;
+				height: auto;
+
+				.header__list {
+					flex-direction: row;
+					align-items: center;
+					margin: 0;
+
+					.header__link a {
+						margin: 0 30px 0 0;
+					}
+
+					.header__btn a {
+						padding: 8px 24px;
+					}
+
+					li {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.header.bg {
+		padding: 14px 0;
+	}
 
 	/* ------ Home ------ */
 
 	.home {
 		background-image: url('../img/bg/saw.svg');
-		background-size: 50%;
+		background-size: 80vh;
 		background-repeat: no-repeat;
-		background-position: 30% 50%;
+		background-position: 30% 15vh;
 
 		.home__body {
 			position: absolute;
@@ -17,7 +60,9 @@
 			left: 50%;
 			transform: translate(0,-50%);
 
-			padding: 0px 40px 0px 0px;
+			margin: 0px 90px 0px 0px;
+
+			max-width: 600px;
 
 			.home__btns {
 				flex-direction: row;
@@ -50,6 +95,46 @@
 		background-size: 20%;
 		background-repeat: no-repeat;
 		background-position: 0% 50%;
+
+		.calc__body {
+			display: flex;
+			flex-direction: column;
+
+			align-items: center;
+			.calc__options {
+				.calc__item {
+					.calc__select {
+						width: 500px;
+					}
+					.calc__mini-select {
+						width: 230px;
+					}
+					.calc__input {
+						width: 230px;
+					}
+
+					select {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.calc__output {
+				margin: 0 0 90px 0;
+			}
+
+			.calc__btns {
+				flex-direction: row;
+				align-items: center;
+
+				.calc__calc-btn {
+					margin: 0px 50px 0px 0px;
+				}
+				.calc__order-btn {
+					margin: 0px;
+				}
+			}
+		}
 	}
 
 

@@ -42,30 +42,29 @@
 					
 					<div class="container">
 						<div class="home__body">
-
-							<div class="home__title">
+							<h1 class="home__title">
 								Распил и кромление
-							</div>
+							</h1>
 							<div class="home__subtitle">
 								Распил ЛДСП, МДФ, ДСП, мебельных щитов, кухонных столешниц, кромление торцов (наклейка кромки) по Москве и Московской области в сжатые сроки
 							</div>
 							<div class="home__btns">
 								<a href="#" class="home__order-btn">Заказать</a>
-								<a href="" class="home__calc-btn">Рассчитать стоимость</a>
+								<a href="#calc" class="home__calc-btn">Рассчитать стоимость</a>
 							</div>
 						</div>
-						<div class="home__down">
-							<svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M35.2998 0L19.9998 14.834L4.69976 0L-0.000244141 4.5668L19.9998 24L39.9998 4.5668L35.2998 0Z" fill="#EAEAEA"/>
-							</svg>
-						</div>
+						<a href="#about" class="home__down">
+								<svg width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M35.2998 0L19.9998 14.834L4.69976 0L-0.000244141 4.5668L19.9998 24L39.9998 4.5668L35.2998 0Z" fill="#EAEAEA"/>
+								</svg>
+						</a>
 					</div>
 				</div>		
 
-				<div class="about">
+				<div class="about" id="about">
 					<div class="container">
 						<div class="about__body">
-							<div class="about__title">О нас</div>
+							<h2 class="about__title">О нас</h2>
 							<div class="about__text">
 								Мы выполняем все виды распила – прямолинейный, смешанный, наклонный. Изготавливаем детали с внутренним и наружным радиусом, сложные искривленные элементы. Мастерство наших сотрудников, а также использование нового оборудования, позволяет получать элементы с идеальными линиями, радиусами, скосами.
 							</div>
@@ -115,10 +114,10 @@
 					</div>
 				</div>	
 
-				<div class="calc">
+				<div class="calc" id="calc">
 					<div class="container">
 						<div class="calc__body">
-							<div class="calc__title">Рассчитать стоимость</div>
+							<h2 class="calc__title">Рассчитать стоимость</h2>
 							<div class="calc__options">
 
 								<div class="calc__item">
@@ -161,9 +160,9 @@
 									<div class="calc__name">
 										Длина и ширина:
 									</div>
-									<input type="number" class="calc__input"/>
+									<input type="number" class="calc__input" min="1"/>
 									<span>x</span>
-									<input type="number" class="calc__input"/>
+									<input type="number" class="calc__input" min="1"/>
 								</div>
 								<div class="calc__item">
 									<div class="calc__name">
@@ -186,7 +185,7 @@
 								Итого: <output></output>
 							</div>
 							<div class="calc__btns">
-								<button class="cacl__calc-btn">Рассчитать стоимость</button>
+								<button class="calc__calc-btn">Рассчитать стоимость</button>
 								<button class="calc__order-btn">Заказать</button>
 							</div>
 						</div>
@@ -196,45 +195,86 @@
 				<div class="price">
 					<div class="container">
 						<div class="price__body">
-							<div class="price__title">Прайс-лист</div>
-							<table class="price__table">
-								<tr>
-									<th>Наименование</th>
-									<th>Стоимость</th>
-								</tr>
+							<h2 class="price__title">Прайс-лист</h2>
 
-								<tr>
-									<td>Изготовление 1-й детали из ЛДСП, ХДФ, ДВП</td>
-									<td>20 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки на радиус столешницы 2*45</td>
-									<td>100 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
-								<tr>
-									<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
-									<td>10230 ₽</td>
-								</tr>
+							<table class="price__table">
+								<thead>
+									<tr>
+										<th>Наименование</th>
+										<th>Стоимость</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Изготовление 1-й детали из ЛДСП, ХДФ, ДВП</td>
+										<td>20 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки на радиус столешницы 2*45</td>
+										<td>100 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+
+
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+									<tr>
+										<td>Нанесение кромки с клеем на столешницу 28/38мм</td>
+										<td>10230 ₽</td>
+									</tr>
+								</tbody>
 
 							</table>
 						</div>
@@ -244,7 +284,7 @@
 				<div class="order">
 					<div class="container">
 						<div class="order__body">
-							<div class="order__title">Заказать</div>
+							<h2 class="order__title">Заказать</h2>
 							<form action="php/send.php" method="post">
 								<div class="order__row">
 									<div class="order__item">
