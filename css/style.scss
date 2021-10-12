@@ -543,7 +543,6 @@ body.lock {
 			text-align: left;
 
 			border-collapse: collapse;
-			border: 2px solid $brown;
 
 			thead {
 				width: 100%;
@@ -556,35 +555,38 @@ body.lock {
 				max-height: 500px;
 				overflow: auto;
 
-				tr {
-					display: block;
-					width: 100%;
-				}
+				border: 2px solid $brown;
 			}
 
-		}
-		.price__table th {
-			font-weight: 500;
-			border: 2px solid $brown;
-		}
-		.price__table td {
-			font-weight: 400;
-			
-		}
-		.price__table th, td {
-			padding: 10px 20px;
-			width: 100%;
-		}
+			tr {
+				display: table;
+				width: 100%;
+			}
 
-		.price__table th:last-child, td:last-child {
-			width: 50%;
-			text-align: center;
-			font-weight: 500;
-		}
+			th {
+				font-weight: 500;
+				border: 2px solid $brown;
+			}
 
-		.price__table tr:nth-child(2n) {
-			color: $dark;
-  		background: rgba(164, 155, 152, 0.1);
+			td {
+				font-weight: 400;
+			}
+
+			th, td {
+				padding: 10px 20px;
+			}
+
+			th:last-child, td:last-child {
+				width: 20%;
+				text-align: center;
+				font-weight: 500;
+				white-space: nowrap;
+			}
+
+			tr:nth-child(2n) {
+				color: $dark;
+  			background: rgba(164, 155, 152, 0.1);
+			}
 		}
 	}
 }

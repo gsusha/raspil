@@ -733,7 +733,6 @@ body.lock {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-  border: 2px solid #B1907F;
 }
 @media (max-width: 767px) {
   .price .price__body .price__table {
@@ -754,9 +753,10 @@ body.lock {
   width: 100%;
   max-height: 500px;
   overflow: auto;
+  border: 2px solid #B1907F;
 }
-.price .price__body .price__table tbody tr {
-  display: block;
+.price .price__body .price__table tr {
+  display: table;
   width: 100%;
 }
 .price .price__body .price__table th {
@@ -766,14 +766,14 @@ body.lock {
 .price .price__body .price__table td {
   font-weight: 400;
 }
-.price .price__body .price__table th, .price .price__body td {
+.price .price__body .price__table th, .price .price__body .price__table td {
   padding: 10px 20px;
-  width: 100%;
 }
-.price .price__body .price__table th:last-child, .price .price__body td:last-child {
-  width: 50%;
+.price .price__body .price__table th:last-child, .price .price__body .price__table td:last-child {
+  width: 20%;
   text-align: center;
   font-weight: 500;
+  white-space: nowrap;
 }
 .price .price__body .price__table tr:nth-child(2n) {
   color: #424046;
